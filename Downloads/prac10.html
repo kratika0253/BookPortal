@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> date time </title>
+<script type="text/javascript">
+//document.getElementById("para1").innerHTML = formatAMPM();
+
+function pracgood() {
+    var date = new Date();
+    var hours = date.getHours();
+    var datenum = date.getDate(); 
+	var datemon = date.getMonth()+1;
+	var dateyear = date.getFullYear();
+    var minutes = date.getUTCMinutes();
+	var seconds = date.getSeconds();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+	var good = '';
+    good = (hours>=5 & hours <=10) ? 'Good Morning' : good;
+    good = (hours>=10 & hours <= 16) ? 'Good Afternoon' : good;
+    good = (hours>=16 & hours <= 22) ? 'Good Evening' : good;
+    good = (hours>=22 & hours <= 5) ? 'Good Night' : good;
+    var strTime =good + ' ' + datenum + '/' + datemon +'/'+ dateyear +' '+ hours + ':' + minutes + ':'+ seconds+' '+ ampm;
+    return strTime;
+	}
+	var to_print = pracgood();
+	document.write(to_print+"<br/>");
+</script>
+</head>
+</html>

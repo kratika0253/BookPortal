@@ -1,0 +1,306 @@
+a) INSERT INTO  client values('&ClintNO','&Name','&City','&Pincode','&State','&Baldue');
+Enter value for clintno: C01
+Enter value for name: Ivan Bayross
+Enter value for city: Mumbai
+Enter value for pincode: 400054
+Enter value for state: Maharashtra
+Enter value for baldue: 15000
+
+
+b) INSERT INTO  client values('&ClintNO','&Name','&City','&Pincode','&State','&Baldue');
+Enter value for clintno: C02
+Enter value for name: Mamta Shah
+Enter value for city: Chennai
+Enter value for pincode: 780001
+Enter value for state: Tamil Nadu
+Enter value for baldue: 0
+
+
+c) INSERT INTO  client values('&ClintNO','&Name','&City','&Pincode','&State','&Baldue');
+Enter value for clintno: C03
+Enter value for name: Chhaya Patel
+Enter value for city: Mumbai
+Enter value for pincode: 400060
+Enter value for state: Maharashtra
+Enter value for baldue:5000
+
+
+d) INSERT INTO  client values('&ClintNO','&Name','&City','&Pincode','&State','&Baldue');
+Enter value for clintno: C04
+Enter value for name: Ashni Joshi
+Enter value for city: Banglore
+Enter value for pincode: 560001
+Enter value for state: Karnataka
+Enter value for baldue: 0
+
+e) INSERT INTO  client values('&ClintNO','&Name','&City','&Pincode','&State','&Baldue');
+Enter value for clintno: C05
+Enter value for name: Harsh Desai
+Enter value for city: Mumbai
+Enter value for pincode: 400060
+Enter value for state: Maharashtra
+Enter value for baldue: 2000
+
+f) INSERT INTO  client values('&ClintNO','&Name','&City','&Pincode','&State','&Baldue');
+Enter value for clintno: C06
+Enter value for name: Deepak Sharma
+Enter value for city: Manglore
+Enter value for pincode: 560050
+Enter value for state: Karnataka
+Enter value for baldue: 0
+
+                                                                                
+g) desc Client
+
+h) SELECT * from Client;                  
+
+i) INSERT INTO  product values('&ProductNO','&Description','&ProfitPercent','&UnitMeasure','&Qtyonhand','&ReorderLevel','&SellPrice','&CostPrice');
+Enter value for productno: P00001
+Enter value for description: 1.44 Floppies
+Enter value for profitpercent: 5
+Enter value for unitmeasure: piece
+Enter value for qtyonhand: 100
+Enter value for reorderlevel: 20
+Enter value for sellprice: 525
+Enter value for costprice: 500
+INSERT INTO  product values('P00001','1.44 Floppies','5','piece','100','20','525','500');
+                    
+
+j) INSERT INTO  product values('&ProductNO','&Description','&ProfitPercent','&UnitMeasure','&Qtyonhand','&ReorderLevel','&SellPrice','&CostPrice')
+Enter value for productno: P00001
+Enter value for description: 1.44 Floppies
+Enter value for profitpercent: 5
+Enter value for unitmeasure: Piece
+Enter value for qtyonhand: 100
+Enter value for reorderlevel: 20
+Enter value for sellprice: 525
+Enter value for costprice: 500
+
+i) INSERT INTO  product values('&ProductNO','&Description','&ProfitPercent','&UnitMeasure','&Qtyonhand','&ReorderLevel','&SellPrice','&CostPrice')
+Enter value for productno: P03453
+Enter value for description: Monitors
+Enter value for profitpercent: 6
+Enter value for unitmeasure: Piece
+Enter value for qtyonhand: 10
+Enter value for reorderlevel: 3
+Enter value for sellprice: 12000
+Enter value for costprice: 11200
+
+j) INSERT INTO  product values('&ProductNO','&Description','&ProfitPercent','&UnitMeasure','&Qtyonhand','&ReorderLevel','&SellPrice','&CostPrice')
+Enter value for productno: P06734
+Enter value for description: Mouse
+Enter value for profitpercent: 5
+Enter value for unitmeasure: Piece
+Enter value for qtyonhand: 20
+Enter value for reorderlevel: 5
+Enter value for sellprice: 1050
+Enter value for costprice: 500
+
+k) INSERT INTO  product values('&ProductNO','&Description','&ProfitPercent','&UnitMeasure','&Qtyonhand','&ReorderLevel','&SellPrice','&CostPrice')
+Enter value for productno: P07865
+Enter value for description: 1.22 Floppies
+Enter value for profitpercent: 5
+Enter value for unitmeasure: Piece
+Enter value for qtyonhand: 100
+Enter value for reorderlevel: 20
+Enter value for sellprice: 525
+Enter value for costprice: 500
+
+l)INSERT INTO  product values('&ProductNO','&Description','&ProfitPercent','&UnitMeasure','&Qtyonhand','&ReorderLevel','&SellPrice','&CostPrice')
+Enter value for productno: P07868
+Enter value for description: Keyboards
+Enter value for profitpercent: 2
+Enter value for unitmeasure: Piece
+Enter value for qtyonhand: 10
+Enter value for reorderlevel: 3
+Enter value for sellprice: 3150
+Enter value for costprice: 3050
+
+m) INSERT INTO  salesman values('&SalesmanNO','&SalesmanName','&Address1','&Address2','&City','&Pincode','&State','&SalAmt','&TgtToGet','&YtdSales','&Remarks');
+
+Enter value for salesmanno: S01
+Enter value for salesmanname: Aman
+Enter value for address1: A/14
+Enter value for address2: Worli
+Enter value for city: Mumbai
+Enter value for pincode: 400002
+Enter value for state: Maharashtra
+Enter value for salamt: 3000
+Enter value for tgttoget: 100
+Enter value for ytdsales: 50
+Enter value for remarks: Good
+
+n) INSERT INTO  salesman values('&SalesmanNO','&SalesmanName','&Address1','&Address2','&City','&Pincode','&State','&SalAmt','&TgtToGet','&YtdSales','&Remarks');
+Enter value for salesmanno: S02
+Enter value for salesmanname: OmkaR
+Enter value for address1: 65
+Enter value for address2: Nariman
+Enter value for city: Mumbai
+Enter value for pincode: 400001
+Enter value for state: Maharashtra
+Enter value for salamt: 3000
+Enter value for tgttoget: 200
+Enter value for ytdsales: 100
+Enter value for remarks: Good
+
+o) INSERT INTO  salesman values('&SalesmanNO','&SalesmanName','&Address1','&Address2','&City','&Pincode','&State','&SalAmt','&TgtToGet','&YtdSales','&Remarks');
+Enter value for salesmanno: S03
+Enter value for salesmanname: Raj
+Enter value for address1: P-7
+Enter value for address2: Bandra
+Enter value for city: Mumbai
+Enter value for pincode: 400032
+Enter value for state: Maharashtra
+Enter value for salamt: 3000
+Enter value for tgttoget: 200
+Enter value for ytdsales: 100
+Enter value for remarks: Good
+
+p) INSERT INTO  salesman values('&SalesmanNO','&SalesmanName','&Address1','&Address2','&City','&Pincode','&State','&SalAmt','&TgtToGet','&YtdSales','&Remarks');
+Enter value for salesmanno: S04
+Enter value for salesmanname: Ashish
+Enter value for address1: A/5
+Enter value for address2: Juhu
+Enter value for city: Mumbai
+Enter value for pincode: 400044
+Enter value for state: Maharashtra
+Enter value for salamt: 3500
+Enter value for tgttoget: 200
+Enter value for ytdsales: 150
+Enter value for remarks: Good
+
+q) INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus');
+
+Enter value for orderno: O19001
+Enter value for clientno: C01
+Enter value for orderdate: 12 Jan 2016
+Enter value for salesmanno: S01
+Enter value for deliverytype: F
+Enter value for billyn: N
+Enter value for deliverydate: 20 Jan 2016
+Enter value for orderstatus: In Process
+
+r) INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus');
+
+Enter value for orderno: O19002
+Enter value for clientno: C02
+Enter value for orderdate: 25 Jan 2017
+Enter value for salesmanno: S02
+Enter value for deliverytype: P
+Enter value for billyn: N
+Enter value for deliverydate: 27 Jan 2017
+Enter value for orderstatus: Cancelled
+old   1: INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus')
+new   1: INSERT INTO  sales_order values('O19002','C02','25 Jan 2017','S02','P','N','27 Jan 2017','Cancelled')
+
+s) INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus');
+
+Enter value for orderno: O46865
+Enter value for clientno: C03
+Enter value for orderdate: 18 Feb 2016
+Enter value for salesmanno: S03
+Enter value for deliverytype: F
+Enter value for billyn: Y
+Enter value for deliverydate: 20 Feb 2017
+Enter value for orderstatus: Fullfilled
+
+t) INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus');
+
+Enter value for orderno: O19003
+Enter value for clientno: C01
+Enter value for orderdate: 03 Apr 2016
+Enter value for salesmanno: S01
+Enter value for deliverytype: F
+Enter value for billyn: Y
+Enter value for deliverydate: 07 Apr 2016
+Enter value for orderstatus: Fullfilled
+
+u) INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus');
+
+Enter value for orderno: O46866
+Enter value for clientno: C04
+Enter value for orderdate: 20 May 2016
+Enter value for salesmanno: S02
+Enter value for deliverytype: P
+Enter value for billyn: N
+Enter value for deliverydate: 22 May 2016
+Enter value for orderstatus: Cancelled
+
+v) INSERT INTO  sales_order values('&OrderNo','&ClientNo','&OrderDate','&SalesmanNo','&DeliveryType','&Billyn','&DeliveryDate','&OrderStatus');
+
+w) Enter value for orderno: O19008
+Enter value for clientno: C05
+Enter value for orderdate: 24 May 2016
+Enter value for salesmanno: S04
+Enter value for deliverytype: F
+Enter value for billyn: N
+Enter value for deliverydate: 26 May 2016
+Enter value for orderstatus: In process
+
+x) INSERT INTO  sales_order_details values('&OrderNo','&ProductNo','&QtyOrdered','&ProductRate');
+Enter value for orderno: O19001
+Enter value for productno: P00001
+Enter value for qtyordered: 4
+Enter value for productrate: 525
+
+y) INSERT INTO  sales_order_details values('&OrderNo','&ProductNo','&QtyOrdered','&ProductRate');
+Enter value for orderno: O19001
+Enter value for productno: P07965
+Enter value for qtyordered: 2
+Enter value for productrate: 8400
+
+z) INSERT INTO  sales_order_details values('&OrderNo','&ProductNo','&QtyOrdered','&ProductRate');
+Enter value for orderno: O19001
+Enter value for productno: P07885
+Enter value for qtyordered: 2
+Enter value for productrate: 5250
+
+1) INSERT INTO  sales_order_details values('&OrderNo','&ProductNo','&QtyOrdered','&ProductRate');
+Enter value for orderno: O19002
+Enter value for productno: P00001
+Enter value for qtyordered: 10
+Enter value for productrate: 525
+
+2) INSERT INTO  sales_order_details values('&OrderNo','&ProductNo','&QtyOrdered','&ProductRate');
+Enter value for orderno: O46865
+Enter value for productno: P07868
+Enter value for qtyordered: 3
+Enter value for productrate: 3150      
+
+3) SELECT * FROM Client where City='Mumbai' OR City='Chennai'
+
+4) SELECT SalesmanName from Salesman where SalAmt=3000;
+
+5) SELECT OrderNO,SalesmanNo from Sales_order;
+
+6) SELECT OrderNo from Sales_order where OrderStatus In ('Cancelled','Fulfilled');
+                                                                                        
+7) SELECT OrderNo from Sales_order where OrderStatus IN ('fullfilled','Cancelled')
+ 
+8) SELECT OrderNo from Sales_order where OrderStatus IN ('Fullfilled','Cancelled')
+
+9) SELECT * from Product where CostPrice BETWEEN 500 And 750;          
+
+10) SELECT * from Product where CostPrice >500 AND CostPrice<=750;
+
+11) SELECT * from Product where SellPrice>500 AND SellPrice<=750;        
+
+12) SELECT * from Product where Sellprice BETWEEN 500 AND 750;          
+
+13) SELECT name from Client where name like '_a%';
+
+14) SELECT name,city,state from Client where State<>'Maharashtra';                                                  
+
+15) SELECT MAX(SellPrice) from Product;
+
+16) SELECT MAX(SellPrice) from Product;
+
+17) SELECT MAX(SellPrice) from Product;
+
+18) SELECT ProductNo,SellPrice*1.5 "New_SellPrice" from Product where SellPrice>500;
+
+19) SELECT MAX(SellPrice) as LargestPrice from Product;
+
+20) SELECT * from product  order by sellprice desc;
+
+21) SELECT * from Sales_order where Orderdate like '%17';

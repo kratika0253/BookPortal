@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var x = [];
+        var i=0;
+        var flag=0;
+
+        do {
+        
+            x[i] = window.prompt('Enter Element ' + (i+1));
+            if(x[i]==="end")
+            flag=1;
+            i++;
+        }while(flag===0);
+        document.write("Sorted array is " + x.sort());
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

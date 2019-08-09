@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+     /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+
+
+/* Standard syntax */
+@keyframes mymove {
+    0%   {top: 0px; left: 0px; background: red; transform: rotate(0deg);}
+    25%  {top: 0px; left: 100px; background: blue; transform: rotate(90deg);}
+    50%  {top: 100px; left: 100px; background: yellow; transform: rotate(180deg);}
+    75%  {top: 100px; left: 0px; background: green; transform: rotate(270deg);}
+    100% {top: 0px; left: 0px; background: red; transform: rotate(360deg);}
+}
+
+.loader {
+  border: 16px solid teal;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<h1>The @keyframes Rule</h1>
+
+<p><strong>Note:</strong> The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+<div class="loader"></div>
+
+</body>
+</html>

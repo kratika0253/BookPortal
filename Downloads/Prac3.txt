@@ -1,0 +1,390 @@
+SQL> update client set city='Bangalore' where clientno='C05';
+
+1 row updated.
+
+SQL> select * from client;
+
+CLIENT NAME                 CITY            PINCODE  STATE              BALDUE                      
+------ -------------------- --------------- -------- --------------- ---------                      
+C01    Ivan Bayross         Mumbai          400054   Maharashtra         15000                      
+C02    Mamta Shah           Chennai         780001   Tamil Nadu              0                      
+C03    Chhaya Patel         Mumbai          400057   Maharashtra          5000                      
+C04    Ashni Joshi          Bangalore       560001   Karnataka               0                      
+C05    Harsh Desai          Bangalore       400060   Maharashtra          2000                      
+C06    Deepak Sharma        Mangalore       560050   Karnataka               0                      
+
+6 rows selected.
+
+SQL> desc salesman;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ SALESMANNO                                                     VARCHAR2(6)
+ SALESMANNAME                                                   VARCHAR2(20)
+ ADDRESS1                                                       VARCHAR2(30)
+ ADDRESS2                                                       VARCHAR2(30)
+ CITY                                                           VARCHAR2(20)
+ PINCODE                                                        NUMBER(8)
+ STATE                                                          VARCHAR2(20)
+ SALAMT                                                         NUMBER(20)
+ TGTTOGET                                                       NUMBER(8,2)
+ YTDSALES                                                       NUMBER(6,2)
+ REMARKS                                                        VARCHAR2(60)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> update salesman set city='Pune';
+
+4 rows updated.
+
+SQL> select * from salesman;
+
+SALESM SALESMANNAME         ADDRESS1                       ADDRESS2                                 
+------ -------------------- ------------------------------ ------------------------------           
+CITY                   PINCODE STATE                   SALAMT  TGTTOGET  YTDSALES                   
+-------------------- --------- -------------------- --------- --------- ---------                   
+REMARKS                                                                                             
+------------------------------------------------------------                                        
+S01    Aman                 A/14                           Worli                                    
+Pune                    400002 Maharashtra               3000       100        50                   
+Good                                                                                                
+                                                                                                    
+S02    Omkar                65                             Nariman                                  
+Pune                    400001 Maharashtra               3000       200       100                   
+Good                                                                                                
+                                                                                                    
+S03    Raj                  P-7                            Bandra                                   
+Pune                    400032 Maharashtra               3000       200       100                   
+Good                                                                                                
+                                                                                                    
+S04    Ashish               A/5                            Juhu                                     
+Pune                    400044 Maharashtra               3500       200       100                   
+Good                                                                                                
+                                                                                                    
+
+SQL> delete from salesman where salamt=3500;
+
+1 row deleted.
+
+SQL> select * from salesman;
+
+SALESM SALESMANNAME         ADDRESS1                       ADDRESS2                                 
+------ -------------------- ------------------------------ ------------------------------           
+CITY                   PINCODE STATE                   SALAMT  TGTTOGET  YTDSALES                   
+-------------------- --------- -------------------- --------- --------- ---------                   
+REMARKS                                                                                             
+------------------------------------------------------------                                        
+S01    Aman                 A/14                           Worli                                    
+Pune                    400002 Maharashtra               3000       100        50                   
+Good                                                                                                
+                                                                                                    
+S02    Omkar                65                             Nariman                                  
+Pune                    400001 Maharashtra               3000       200       100                   
+Good                                                                                                
+                                                                                                    
+S03    Raj                  P-7                            Bandra                                   
+Pune                    400032 Maharashtra               3000       200       100                   
+Good                                                                                                
+                                                                                                    
+
+SQL> commit;
+
+Commit complete.
+
+SQL> desc client;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ CLIENTNO                                                       VARCHAR2(6)
+ NAME                                                           VARCHAR2(20)
+ CITY                                                           VARCHAR2(15)
+ PINCODE                                                        VARCHAR2(8)
+ STATE                                                          VARCHAR2(15)
+ BALDUE                                                         NUMBER(10,5)
+
+SQL> select * from client;
+
+CLIENT NAME                 CITY            PINCODE  STATE              BALDUE                      
+------ -------------------- --------------- -------- --------------- ---------                      
+C01    Ivan Bayross         Mumbai          400054   Maharashtra         15000                      
+C02    Mamta Shah           Chennai         780001   Tamil Nadu              0                      
+C03    Chhaya Patel         Mumbai          400057   Maharashtra          5000                      
+C04    Ashni Joshi          Bangalore       560001   Karnataka               0                      
+C05    Harsh Desai          Bangalore       400060   Maharashtra          2000                      
+C06    Deepak Sharma        Mangalore       560050   Karnataka               0                      
+
+6 rows selected.
+
+SQL> delete from client where state='Tamil Nadu';
+
+1 row deleted.
+
+SQL> select * from client;
+
+CLIENT NAME                 CITY            PINCODE  STATE              BALDUE                      
+------ -------------------- --------------- -------- --------------- ---------                      
+C01    Ivan Bayross         Mumbai          400054   Maharashtra         15000                      
+C03    Chhaya Patel         Mumbai          400057   Maharashtra          5000                      
+C04    Ashni Joshi          Bangalore       560001   Karnataka               0                      
+C05    Harsh Desai          Bangalore       400060   Maharashtra          2000                      
+C06    Deepak Sharma        Mangalore       560050   Karnataka               0                      
+
+SQL> commit;
+
+Commit complete.
+
+SQL> alter table client add telephone number(10);
+
+Table altered.
+
+SQL> desc client;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ CLIENTNO                                                       VARCHAR2(6)
+ NAME                                                           VARCHAR2(20)
+ CITY                                                           VARCHAR2(15)
+ PINCODE                                                        VARCHAR2(8)
+ STATE                                                          VARCHAR2(15)
+ BALDUE                                                         NUMBER(10,5)
+ TELEPHONE                                                      NUMBER(10)
+
+SQL> desc product;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ PRODUCTNO                                                      VARCHAR2(6)
+ DESCRIPTION                                                    VARCHAR2(15)
+ PROFITPERCENT                                                  NUMBER(4,2)
+ UNITMEASURE                                                    VARCHAR2(10)
+ QTYONHAND                                                      NUMBER(8)
+ REORDERLVL                                                     NUMBER(8)
+ SELLPRICE                                                      NUMBER(8,2)
+ COSTPRICE                                                      NUMBER(8,2)
+
+SQL> insert into client.telephone values (123);
+insert into client.telephone values (123)
+                   *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> desc client;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ CLIENTNO                                                       VARCHAR2(6)
+ NAME                                                           VARCHAR2(20)
+ CITY                                                           VARCHAR2(15)
+ PINCODE                                                        VARCHAR2(8)
+ STATE                                                          VARCHAR2(15)
+ BALDUE                                                         NUMBER(10,5)
+ TELEPHONE                                                      NUMBER(10)
+
+SQL> update client set telephone=123456 where clientno='C01';
+
+1 row updated.
+
+SQL> select * from client;
+
+CLIENT NAME                 CITY            PINCODE  STATE              BALDUE TELEPHONE            
+------ -------------------- --------------- -------- --------------- --------- ---------            
+C01    Ivan Bayross         Mumbai          400054   Maharashtra         15000    123456            
+C03    Chhaya Patel         Mumbai          400057   Maharashtra          5000                      
+C04    Ashni Joshi          Bangalore       560001   Karnataka               0                      
+C05    Harsh Desai          Bangalore       400060   Maharashtra          2000                      
+C06    Deepak Sharma        Mangalore       560050   Karnataka               0                      
+
+SQL> commit;
+
+Commit complete.
+
+SQL> alter table product modify (sellprice number(6,2));
+alter table product modify (sellprice number(6,2))
+                            *
+ERROR at line 1:
+ORA-01440: column to be modified must be empty to decrease precision or scale 
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from product;
+
+PRODUC DESCRIPTION     PROFITPERCENT UNITMEASUR QTYONHAND REORDERLVL SELLPRICE COSTPRICE            
+------ --------------- ------------- ---------- --------- ---------- --------- ---------            
+P00001 1.44 Floppies               5 Piece            100         20       525       500            
+P03453 Monitors                    6 Piece             10          3     12000     11200            
+P06734 Mouse                       5 Piece             20          5      1050       500            
+P07865 1.22 Floppies               5 Piece            100         20       525       500            
+P07868 Keyboards                   2 Piece             10          3      3150      3050            
+
+SQL> desc product;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ PRODUCTNO                                                      VARCHAR2(6)
+ DESCRIPTION                                                    VARCHAR2(15)
+ PROFITPERCENT                                                  NUMBER(4,2)
+ UNITMEASURE                                                    VARCHAR2(10)
+ QTYONHAND                                                      NUMBER(8)
+ REORDERLVL                                                     NUMBER(8)
+ SELLPRICE                                                      NUMBER(8,2)
+ COSTPRICE                                                      NUMBER(8,2)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> rename salesman sman;
+rename salesman sman
+                *
+ERROR at line 1:
+ORA-00946: missing TO keyword 
+
+
+SQL> rename salesman to sman;
+
+Table renamed.
+
+SQL> desc sman;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ SALESMANNO                                                     VARCHAR2(6)
+ SALESMANNAME                                                   VARCHAR2(20)
+ ADDRESS1                                                       VARCHAR2(30)
+ ADDRESS2                                                       VARCHAR2(30)
+ CITY                                                           VARCHAR2(20)
+ PINCODE                                                        NUMBER(8)
+ STATE                                                          VARCHAR2(20)
+ SALAMT                                                         NUMBER(20)
+ TGTTOGET                                                       NUMBER(8,2)
+ YTDSALES                                                       NUMBER(6,2)
+ REMARKS                                                        VARCHAR2(60)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> create table sales_order_new as select * from sales_order;
+
+Table created.
+
+SQL> desc sales_order_new;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ORDERNO                                                        VARCHAR2(6)
+ CLIENTNO                                                       VARCHAR2(6)
+ ORDERDATE                                                      DATE
+ SALESMANNO                                                     VARCHAR2(6)
+ DELAYTYPE                                                      CHAR(1)
+ BILLYN                                                         CHAR(1)
+ DELAYDATE                                                      DATE
+ ORDERSTATUS                                                    VARCHAR2(10)
+
+SQL> select * from sales_order_new;
+
+ORDERN CLIENT ORDERDATE SALESM D B DELAYDATE ORDERSTATU                                             
+------ ------ --------- ------ - - --------- ----------                                             
+O19001 C01    12-JAN-16 S01    F N 20-JAN-16 In Process                                             
+O19002 C02    25-JAN-17 S02    P N 27-JAN-17 Cancelled                                              
+O46865 C03    18-FEB-17 S03    F Y 20-FEB-17 Fulfilled                                              
+O19003 C01    03-APR-16 S01    F Y 07-APR-16 Fulfilled                                              
+O46866 C04    20-MAY-16 S02    P N 22-MAY-16 Cancelled                                              
+O19008 C05    24-MAY-16 S04    F N 26-MAY-16 In Process                                             
+
+6 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> create table order_details as select * from sales_order_detail where 0=1;
+create table order_details as select * from sales_order_detail where 0=1
+                                            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> desc sales_order_details;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ORDERNO                                                        VARCHAR2(6)
+ PRODUCTNO                                                      VARCHAR2(6)
+ QTYORDERED                                                     NUMBER(8)
+ PRODUCTRATE                                                    NUMBER(10,2)
+
+SQL> create table order_details as select * from sales_order_details where 0=1;
+
+Table created.
+
+SQL> desc order_details;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ORDERNO                                                        VARCHAR2(6)
+ PRODUCTNO                                                      VARCHAR2(6)
+ QTYORDERED                                                     NUMBER(8)
+ PRODUCTRATE                                                    NUMBER(10,2)
+
+SQL> select * from order_details;
+
+no rows selected
+
+SQL> commit;
+
+Commit complete.
+
+SQL> truncate sales_order_new;
+truncate sales_order_new
+                       *
+ERROR at line 1:
+ORA-03290: Invalid truncate command - missing CLUSTER or TABLE keyword 
+
+
+SQL> truncate table sales_order_new;
+
+Table truncated.
+
+SQL> select * from sales_order_new;
+
+no rows selected
+
+SQL> commit;
+
+Commit complete.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> desc sales_order_new;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ ORDERNO                                                        VARCHAR2(6)
+ CLIENTNO                                                       VARCHAR2(6)
+ ORDERDATE                                                      DATE
+ SALESMANNO                                                     VARCHAR2(6)
+ DELAYTYPE                                                      CHAR(1)
+ BILLYN                                                         CHAR(1)
+ DELAYDATE                                                      DATE
+ ORDERSTATUS                                                    VARCHAR2(10)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> drop table sales_order_new;
+
+Table dropped.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> desc sales_order_new;
+ERROR:
+ORA-04043: object sales_order_new does not exist 
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off;

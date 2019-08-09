@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var my_time = new Date();
+   	    var hours = my_time.getHours();
+    	var ampm = hours >= 12 ? 'pm' : 'am';
+       	if(ampm="pm")
+       		message="Good Evening";
+       	else
+       		message="Good Morning";
+		alert(message + ", "+my_time.getDate()+"/"+my_time.getMonth()+"/"+my_time.getFullYear()+" "+my_time.getHours() + ":" + my_time.getMinutes() + ":" + my_time.getSeconds() + ampm);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
